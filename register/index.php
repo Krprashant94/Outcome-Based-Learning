@@ -1,6 +1,11 @@
 <?php
-  define("HOME_PAGE", "http://localhost/outcome/Outcome-Based-Learning/");
   include_once('../core/constent.php');
+
+  if (isset($_SESSION['login'])) {
+    if ($_SESSION['login']) {
+      header("Location: ".HOME_PAGE.'dashboard');
+    }
+  }
 
   $alert = '0';
   $alert_code = 0;

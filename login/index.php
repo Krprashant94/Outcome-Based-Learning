@@ -1,5 +1,4 @@
 <?php
-  define("HOME_PAGE", "http://localhost/outcome/Outcome-Based-Learning/");
   include_once('../core/constent.php');
 
   $alert = '0';
@@ -7,7 +6,7 @@
 
   if (isset($_SESSION['login'])) {
     if ($_SESSION['login']) {
-      header("Location: ".HOME_PAGE.'dashbord');
+      header("Location: ".HOME_PAGE.'dashboard');
     }
   }
 
@@ -19,7 +18,7 @@
       if(count($user) == 1){
         $_SESSION['user'] = $user[0];
         $_SESSION['login'] = true;
-        header("Location: ".HOME_PAGE.'dashbord');
+        header("Location: ".HOME_PAGE.'dashboard');
       }
     }else{
       $alert_code = 1;
