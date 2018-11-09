@@ -1,15 +1,30 @@
 <?php
   define("HOME_PAGE", "http://localhost/outcome/Outcome-Based-Learning/");
+  include_once('../core/constent.php');
+
   $alert = '0';
   $alert_code = 0;
+
+  if (isset($_SESSION['login'])) {
+    if ($_SESSION['login']) {
+      header("Location: ".HOME_PAGE.'dashbord');
+    }
+  }
+
   if (isset($_POST['roll']) && isset($_POST['password'])) {
     if (!empty($_POST['roll']) && !empty($_POST['password'])) {
-      print_r($_POST);
+      include_once("../core/db.php");
+      $db = new Database();
+      $user = $db->fetch_by_two_id('student', 'roll_no', $_POST['roll'], 'password', $_POST['password']);
+      if(count($user) == 1){
+        $_SESSION['user'] = $user[0];
+        $_SESSION['login'] = true;
+        header("Location: ".HOME_PAGE.'dashbord');
+      }
     }else{
       $alert_code = 1;
     }
   }
-  print_r($_POST);
 ?>
 <!DOCTYPE html>
 <html>

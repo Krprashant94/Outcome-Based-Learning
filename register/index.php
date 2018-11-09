@@ -1,8 +1,9 @@
 <?php
   define("HOME_PAGE", "http://localhost/outcome/Outcome-Based-Learning/");
+  include_once('../core/constent.php');
+
   $alert = '0';
   $alert_code = 0;
-  include_once('../core/constent.php');
   if(isset($_POST['name']) && isset($_POST['roll']) && isset($_POST['password'])){
     if(!empty($_POST['name']) && !empty($_POST['roll']) && !empty($_POST['password'])){
       include_once("../core/db.php");
@@ -20,6 +21,7 @@
                   'middle_name' => $name[1],
                   'last_name' => $name[2],
                   'roll_no' => $_POST['roll'],
+                  'password' => $_POST['password'],
                   'insert_time' => time(),
                   'insert_by' => $_POST['roll']
                   );
