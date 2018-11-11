@@ -23,7 +23,7 @@
   <div class="wrapper ">
     
       <?php
-        $page = 'table';
+        $page = 'user';
         include_once "side_nav.php";
       ?>
     <div class="main-panel">
@@ -36,34 +36,28 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Enrolled Cources</h4>
-                  <p class="card-category"> 5 Enrolled Cources for 4th semester</p>
+                  <h4 class="card-title ">Student List</h4>
+                  <p class="card-category"> 514 Student in 8 diffrent Semester</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <th>
-                          Select
+                          Name
                         </th>
                         <th>
-                          Paper name
+                          Roll Number
                         </th>
                         <th>
-                          Paper code
+                          Semester
                         </th>
                         <th>
-                          Outcome Point
-                        </th>
-                        <th>
-                          Achived
+                          &nbsp;
                         </th>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Dakota Rice
                           </td>
@@ -74,13 +68,10 @@
                             Oud-Turnhout
                           </td>
                           <td class="text-primary">
-                            $36,738
+                            <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Minerva Hooper
                           </td>
@@ -91,13 +82,10 @@
                             Sinaai-Waas
                           </td>
                           <td class="text-primary">
-                            $23,789
+                            <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Sage Rodriguez
                           </td>
@@ -108,13 +96,10 @@
                             Baileux
                           </td>
                           <td class="text-primary">
-                            $56,142
+                            <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Philip Chaney
                           </td>
@@ -125,13 +110,10 @@
                             Overland Park
                           </td>
                           <td class="text-primary">
-                            $38,735
+                            <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Doris Greene
                           </td>
@@ -142,13 +124,10 @@
                             Feldkirchen in Kärnten
                           </td>
                           <td class="text-primary">
-                            $63,542
+                  <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input type="checkbox" name="course">
-                          </td>
                           <td>
                             Mason Porter
                           </td>
@@ -159,13 +138,12 @@
                             Gloucester
                           </td>
                           <td class="text-primary">
-                            $78,615
+                            <button type="submit" class="btn btn-primary pull-right">View</button>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <button type="submit" class="btn btn-primary pull-right">Update</button>
                 </div>
               </div>
             </div>
